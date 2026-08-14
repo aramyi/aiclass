@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>교육 전문가 포트폴리오 | Education Specialist Portfolio</title>
+  <meta name="description" content="미래 교육과정 설계, AI 융합 교수법, 에듀테크 기반 맞춤형 학습을 선도하는 교육 전문가 포트폴리오" />
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Pretendard', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'Roboto', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <!-- Pretendard Korean Typography -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+      letter-spacing: -0.015em;
+    }
+  </style>
+</head>
+<body class="bg-neutral-50 text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100 antialiased selection:bg-blue-500 selection:text-white transition-colors duration-300">
+
+  <!-- Apple-Style Frosted Navbar -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/85 dark:bg-neutral-900/85 backdrop-blur-md border-b border-neutral-200/70 dark:border-neutral-800/80 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-18 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2.5 group">
+        <div class="w-9 h-9 rounded-xl bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 flex items-center justify-center font-bold text-sm shadow-xs">
+          SY
+        </div>
+        <div class="flex flex-col">
+          <span class="font-semibold text-sm tracking-tight text-neutral-900 dark:text-neutral-100 flex items-center gap-1.5">
+            김서연 교육공학
+            <span class="text-[10px] font-normal px-1.5 py-0.5 rounded-full bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-800">
+              Ph.D.
+            </span>
+          </span>
+          <span class="text-[11px] text-neutral-500 dark:text-neutral-400 font-normal">
+            Future EduTech & AI Pedagogy
+          </span>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="hidden md:flex items-center gap-1 lg:gap-2">
+        <a href="#profile" class="text-xs lg:text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-neutral-950 dark:hover:text-white px-3 py-1.5 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">소개 & 역량</a>
+        <a href="#teaching" class="text-xs lg:text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-neutral-950 dark:hover:text-white px-3 py-1.5 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">교수법 & 에듀테크</a>
+        <a href="#research" class="text-xs lg:text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-neutral-950 dark:hover:text-white px-3 py-1.5 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">연구 & 저서</a>
+        <a href="#resources" class="text-xs lg:text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-neutral-950 dark:hover:text-white px-3 py-1.5 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">교육 자료</a>
+        <a href="#contact" class="text-xs lg:text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-neutral-950 dark:hover:text-white px-3 py-1.5 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">연수 의뢰</a>
+      </nav>
+
+      <!-- Theme Switcher & Actions -->
+      <div class="flex items-center gap-2">
+        <button id="themeToggleBtn" onclick="toggleTheme()" class="p-2 rounded-full text-neutral-600 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors" title="다크/라이트 모드 전환">
+          <i data-lucide="moon" class="w-4 h-4 block dark:hidden"></i>
+          <i data-lucide="sun" class="w-4 h-4 hidden dark:block text-amber-400"></i>
+        </button>
+        <a href="#contact" class="hidden sm:inline-flex items-center gap-1 text-xs font-medium px-4 py-2 rounded-full bg-neutral-900 hover:bg-neutral-800 dark:bg-white dark:hover:bg-neutral-100 text-white dark:text-neutral-900 transition-all shadow-xs">
+          <span>강의·협업 의뢰</span>
+          <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-28 sm:pt-36 pb-16 sm:pb-24 border-b border-neutral-200/60 dark:border-neutral-800/60 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-6">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-neutral-100 dark:bg-neutral-800/80 border border-neutral-200/80 dark:border-neutral-700/80 text-neutral-800 dark:text-neutral-200 text-xs font-medium tracking-tight">
+        <span class="flex h-2 w-2 rounded-full bg-blue-600 dark:bg-blue-400 animate-pulse"></span>
+        <span>AI 융합 교육 & 에듀테크 교수학습 혁신 전문가</span>
+      </div>
+
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900 dark:text-white leading-[1.18]">
+        배움의 본질을 깨우는 <br class="hidden sm:inline" />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-neutral-900 via-blue-900 to-neutral-700 dark:from-white dark:via-blue-200 dark:to-neutral-300">
+          미래 교육의 새로운 기준
+        </span>
+      </h1>
+
+      <p class="text-base sm:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed font-normal max-w-2xl mx-auto">
+        생성형 AI 융합 교수법과 데이터 기반 맞춤형 학습으로 학습자의 자기주도성을 깨우고, 교실의 상호작용을 극대화하는 교육 혁신을 실천합니다.
+      </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-2 pt-1 text-xs font-medium text-neutral-500 dark:text-neutral-400">
+        <span class="px-3 py-1 rounded-full bg-neutral-100/80 dark:bg-neutral-800/60 border border-neutral-200/50 dark:border-neutral-700/50">
+          서울대 교육공학 박사 (Ph.D.)
+        </span>
+        <span class="px-3 py-1 rounded-full bg-neutral-100/80 dark:bg-neutral-800/60 border border-neutral-200/50 dark:border-neutral-700/50">
+          Apple Distinguished Educator (ADE)
+        </span>
+        <span class="px-3 py-1 rounded-full bg-neutral-100/80 dark:bg-neutral-800/60 border border-neutral-200/50 dark:border-neutral-700/50">
+          Google for Education Certified Innovator
+        </span>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-4">
+        <a href="#contact" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-neutral-900 hover:bg-neutral-800 dark:bg-white dark:hover:bg-neutral-100 text-white dark:text-neutral-900 text-sm font-semibold transition-all shadow-sm">
+          <span>특강 및 직무연수 의뢰</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+        <a href="#teaching" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-neutral-900 dark:text-white text-sm font-medium transition-all border border-neutral-200/60 dark:border-neutral-700/60">
+          <i data-lucide="compass" class="w-4 h-4 text-blue-600 dark:text-blue-400"></i>
+          <span>교수법 & 에듀테크 보기</span>
+        </a>
+      </div>
+
+      <!-- Quick Stats -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mt-14 sm:mt-20">
+        <div class="p-5 sm:p-6 rounded-2xl bg-white dark:bg-neutral-900/90 border border-neutral-200/70 dark:border-neutral-800/80 text-center">
+          <div class="text-2xl sm:text-3xl font-bold tracking-tight text-neutral-900 dark:text-white">350+ <span class="text-xs font-normal text-neutral-500">회</span></div>
+          <div class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mt-1.5 font-medium">누적 교원 연수 및 특강</div>
+        </div>
+        <div class="p-5 sm:p-6 rounded-2xl bg-white dark:bg-neutral-900/90 border border-neutral-200/70 dark:border-neutral-800/80 text-center">
+          <div class="text-2xl sm:text-3xl font-bold tracking-tight text-neutral-900 dark:text-white">18,500+ <span class="text-xs font-normal text-neutral-500">명</span></div>
+          <div class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mt-1.5 font-medium">참여 학습자 및 교원</div>
+        </div>
+        <div class="p-5 sm:p-6 rounded-2xl bg-white dark:bg-neutral-900/90 border border-neutral-200/70 dark:border-neutral-800/80 text-center">
+          <div class="text-2xl sm:text-3xl font-bold tracking-tight text-neutral-900 dark:text-white">14 <span class="text-xs font-normal text-neutral-500">편</span></div>
+          <div class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mt-1.5 font-medium">집필 도서 및 연구보고서</div>
+        </div>
+        <div class="p-5 sm:p-6 rounded-2xl bg-white dark:bg-neutral-900/90 border border-neutral-200/70 dark:border-neutral-800/80 text-center">
+          <div class="text-2xl sm:text-3xl font-bold tracking-tight text-neutral-900 dark:text-white">4.94 <span class="text-xs font-normal text-neutral-500">/ 5.0</span></div>
+          <div class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mt-1.5 font-medium">강의 만족도 평점</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 1. Profile Section -->
+  <section id="profile" class="py-16 sm:py-24 border-b border-neutral-200/60 dark:border-neutral-800/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl mb-12">
+        <span class="text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">01. PROFILE & EXPERTISE</span>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white mt-2">전문 분야 및 주요 약력</h2>
+        <p class="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 mt-3">교육공학 이론과 풍부한 교실 실무 경험을 바탕으로 미래형 교수학습 프레임워크를 연구합니다.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-12">
+        <div class="lg:col-span-7 p-6 sm:p-8 rounded-3xl bg-white dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800 space-y-4">
+          <div class="flex items-center gap-4">
+            <div class="w-16 h-16 rounded-2xl bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 flex items-center justify-center font-bold text-2xl">SY</div>
+            <div>
+              <h3 class="text-xl font-bold text-neutral-900 dark:text-white">김서연 <span class="text-xs text-neutral-500 font-normal">Dr. Seoyeon Kim, Ph.D.</span></h3>
+              <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 font-medium">교육공학자 & 에듀테크 교수설계 전문가</p>
+              <p class="text-xs text-neutral-500 mt-0.5">서울대학교 교육연구원 객원연구원 / 미래교육공학연구소 대표</p>
+            </div>
+          </div>
+          <p class="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed pt-2">
+            서울대학교 사범대학에서 교육공학 박사학위를 취득하였으며, 한국교육학술정보원(KERIS) 연구원 및 교육부 정책 자문위원으로 활동하며 AI 융합 교육 및 에듀테크 교수학습 혁신을 이끌어 왔습니다.
+          </p>
+          <div class="pt-4 border-t border-neutral-100 dark:border-neutral-800 flex items-center justify-between text-xs text-neutral-500">
+            <span>연구실 공식 연락처</span>
+            <span class="font-mono text-neutral-800 dark:text-neutral-200">seoyeon.edu@example.com</span>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 p-6 sm:p-8 rounded-3xl bg-neutral-900 text-white dark:bg-neutral-900/90 border border-neutral-800 flex flex-col justify-between">
+          <div class="space-y-3">
+            <span class="text-[11px] font-semibold tracking-wider text-blue-400 uppercase">Educational Philosophy</span>
+            <h4 class="text-lg sm:text-xl font-bold leading-snug">“기술은 목적이 아니라, 학습자의 잠재력과 교실의 연결을 돕는 따뜻한 촉매여야 합니다.”</h4>
+            <p class="text-xs text-neutral-300 leading-relaxed">진정한 교육 혁신은 도구의 사용이 아닌, 학생 스스로 질문하고 사고하며 협력하는 배움의 주도성에 있습니다.</p>
+          </div>
+          <div class="pt-6 border-t border-neutral-800 text-xs text-neutral-400 flex justify-between">
+            <span>김서연의 교육 신조</span>
+            <span class="text-blue-400 font-mono">Pedagogy First</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 Core Specialties -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="p-6 rounded-2xl bg-white dark:bg-neutral-900 border border-neutral-200/70 dark:border-neutral-800/80">
+          <div class="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 flex items-center justify-center mb-3">
+            <i data-lucide="sparkles" class="w-5 h-5"></i>
+          </div>
+          <h4 class="text-base font-bold text-neutral-900 dark:text-white mb-1.5">생성형 AI 기반 맞춤형 교수설계</h4>
+          <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-3">ChatGPT, Gemini 등 생성형 AI를 활용한 학습자 수준별 비계설정과 개별화 피드백 수업 모형 개발</p>
+          <div class="flex flex-wrap gap-1 text-[11px] font-medium text-neutral-600 dark:text-neutral-300">
+            <span class="bg-neutral-100 dark:bg-neutral-800 px-2 py-0.5 rounded">Prompt Engineering</span>
+            <span class="bg-neutral-100 dark:bg-neutral-800 px-2 py-0.5 rounded">AI 교과 융합</span>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white dark:bg-neutral-900 border border-neutral-200/70 dark:border-neutral-800/80">
+          <div class="w-10 h-10 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mb-3">
+            <i data-lucide="layers" class="w-5 h-5"></i>
+          </div>
+          <h4 class="text-base font-bold text-neutral-900 dark:text-white mb-1.5">에듀테크 도구 통합 & 스마트 교실 구축</h4>
+          <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-3">Miro, Padlet, Slido를 유기적으로 연계하여 몰입도 높은 실시간 상호작용 및 온·오프라인 블렌디드 러닝 설계</p>
+          <div class="flex flex-wrap gap-1 text-[11px] font-medium text-neutral-600 dark:text-neutral-300">
+            <span class="bg-neutral-100 dark:bg-neutral-800 px-2 py-0.5 rounded">Blended Learning</span>
+            <span class="bg-neutral-100 dark:bg-neutral-800 px-2 py-0.5 rounded">실시간 협업</span>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white dark:bg-neutral-900 border border-neutral-200/70 dark:border-neutral-800/80">
+          <div class="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-3">
+            <i data-lucide="line-chart" class="w-5 h-5"></i>
+          </div>
+          <h4 class="text-base font-bold text-neutral-900 dark:text-white mb-1.5">데이터 기반 학습 분석 & 피드백 시스템</h4>
+          <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-3">학습 과정 데이터를 분석해 취약 오개념을 조기에 진단하고 메타인지와 자기조절학습 능력을 강화하는 피드백 체계</p>
+          <div class="flex flex-wrap gap-1 text-[11px] font-medium text-neutral-600 dark:text-neutral-300">
+            <span class="bg-neutral-100 dark:bg-neutral-800 px-2 py-0.5 rounded">Learning Analytics</span>
+            <span class="bg-neutral-100 dark:bg-neutral-800 px-2 py-0.5 rounded">형성평가 체계</span>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white dark:bg-neutral-900 border border-neutral-200/70 dark:border-neutral-800/80">
+          <div class="w-10 h-10 rounded-xl bg-amber-50 dark:bg-amber-950/60 text-amber-600 dark:text-amber-400 flex items-center justify-center mb-3">
+            <i data-lucide="users" class="w-5 h-5"></i>
+          </div>
+          <h4 class="text-base font-bold text-neutral-900 dark:text-white mb-1.5">교원 디지털 역량 직무연수 & 컨설팅</h4>
+          <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-3">초·중·고 교원 및 대학교수를 대상으로 수업에 즉각 적용 가능한 실습 중심 워크숍과 교육과정 컨설팅 제공</p>
+          <div class="flex flex-wrap gap-1 text-[11px] font-medium text-neutral-600 dark:text-neutral-300">
+            <span class="bg-neutral-100 dark:bg-neutral-800 px-2 py-0.5 rounded">교원 직무연수</span>
+            <span class="bg-neutral-100 dark:bg-neutral-800 px-2 py-0.5 rounded">수업 컨설팅</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Teaching & EdTech Section -->
+  <section id="teaching" class="py-16 sm:py-24 border-b border-neutral-200/60 dark:border-neutral-800/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl mb-12">
+        <span class="text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">02. PEDAGOGY & EDTECH STACK</span>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white mt-2">수업 방식 및 에듀테크 도구</h2>
+        <p class="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 mt-3">학습자의 몰입을 이끌어내는 검증된 4대 교수 모델과 실전 활용 툴킷입니다.</p>
+      </div>
+
+      <!-- 4 Teaching Models -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+        <div class="p-6 sm:p-7 rounded-3xl bg-white dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-2xl bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 flex items-center justify-center">
+              <i data-lucide="compass" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h4 class="text-base sm:text-lg font-bold text-neutral-900 dark:text-white">AI-Augmented Flipped Learning</h4>
+              <p class="text-xs text-neutral-500">사전 개념 탐구와 교실 토론이 결합된 역진행 수업</p>
+            </div>
+          </div>
+          <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+            학생은 AI 튜터와 함께 사전에 핵심 개념을 탐색하고, 수업 시간에는 심화 토론과 소그룹 탐구 프로젝트를 수행합니다.
+          </p>
+          <div class="pt-3 border-t border-neutral-100 dark:border-neutral-800 text-[11px] font-medium text-emerald-600 dark:text-emerald-400">
+            ✓ 학습자 수업 참여도 82% 향상 · 자발적 질문 발생 빈도 3.4배 증가
+          </div>
+        </div>
+
+        <div class="p-6 sm:p-7 rounded-3xl bg-white dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-2xl bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex items-center justify-center">
+              <i data-lucide="layout-grid" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h4 class="text-base sm:text-lg font-bold text-neutral-900 dark:text-white">Co-Creative Digital Whiteboard PBL</h4>
+              <p class="text-xs text-neutral-500">디지털 캔버스를 통한 시각적 협력 프로젝트 학습</p>
+            </div>
+          </div>
+          <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+            Miro와 Padlet을 기반으로 문제 정의, 브레인스토밍, 프로토타입 설계를 실시간 공유 보드에서 협업합니다.
+          </p>
+          <div class="pt-3 border-t border-neutral-100 dark:border-neutral-800 text-[11px] font-medium text-emerald-600 dark:text-emerald-400">
+            ✓ 협업 기여도 실시간 시각화 · 프로젝트 완수율 96%
+          </div>
+        </div>
+
+        <div class="p-6 sm:p-7 rounded-3xl bg-white dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-50 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
+              <i data-lucide="activity" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h4 class="text-base sm:text-lg font-bold text-neutral-900 dark:text-white">Data-Driven Micro-Formative Assessment</h4>
+              <p class="text-xs text-neutral-500">실시간 형성평가 & 즉각 오개념 교정 피드백</p>
+            </div>
+          </div>
+          <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+            15분 단위의 Slido/Kahoot 마이크로 퀴즈로 이해도 히트맵을 확인하고, 취약 지점에 대한 맞춤형 해설을 즉시 제공합니다.
+          </p>
+          <div class="pt-3 border-t border-neutral-100 dark:border-neutral-800 text-[11px] font-medium text-emerald-600 dark:text-emerald-400">
+            ✓ 학습 결손 조기 예방 · 시험 불안감 40% 감소
+          </div>
+        </div>
+
+        <div class="p-6 sm:p-7 rounded-3xl bg-white dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-2xl bg-amber-50 dark:bg-amber-950 text-amber-600 dark:text-amber-400 flex items-center justify-center">
+              <i data-lucide="book-open-check" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h4 class="text-base sm:text-lg font-bold text-neutral-900 dark:text-white">Notion Metacognitive Learning Logs</h4>
+              <p class="text-xs text-neutral-500">디지털 아카이빙을 통한 메타인지 성장 포트폴리오</p>
+            </div>
+          </div>
+          <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+            학생 개별 노션 대시보드에 3-2-1 성찰 루틴(배운 점 3가지, 생각 2가지, 질문 1가지)을 기록하며 스스로 사고 과정을 점검합니다.
+          </p>
+          <div class="pt-3 border-t border-neutral-100 dark:border-neutral-800 text-[11px] font-medium text-emerald-600 dark:text-emerald-400">
+            ✓ 자기주도학습 지수 유의미한 상승 · 학습 지속성 강화
+          </div>
+        </div>
+      </div>
+
+      <!-- EdTech Tools Grid -->
+      <h3 class="text-lg font-bold text-neutral-900 dark:text-white mb-6">주요 에듀테크 도구 (EdTech Stack)</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="p-5 rounded-2xl bg-white dark:bg-neutral-900 border border-neutral-200/70 dark:border-neutral-800">
+          <div class="flex items-center justify-between mb-3">
+            <i data-lucide="bot" class="w-6 h-6 text-blue-500"></i>
+            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400">Master</span>
+          </div>
+          <h4 class="text-base font-bold text-neutral-900 dark:text-white">Google Gemini & ChatGPT Plus</h4>
+          <p class="text-xs text-neutral-500 dark:text-neutral-400 mt-1">생성형 AI · 수업 설계 & 수준별 예시 문항 생성</p>
+          <p class="text-xs text-neutral-600 dark:text-neutral-300 mt-3">역할과 루브릭을 지정한 프롬프트로 1분 만에 3단계 난이도 문항 세트와 개별 피드백 생성</p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white dark:bg-neutral-900 border border-neutral-200/70 dark:border-neutral-800">
+          <div class="flex items-center justify-between mb-3">
+            <i data-lucide="share-2" class="w-6 h-6 text-emerald-500"></i>
+            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-50 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400">Power User</span>
+          </div>
+          <h4 class="text-base font-bold text-neutral-900 dark:text-white">Padlet & Miro Collaboration</h4>
+          <p class="text-xs text-neutral-500 dark:text-neutral-400 mt-1">협업 캔버스 · 브레인스토밍 및 모둠 토론</p>
+          <p class="text-xs text-neutral-600 dark:text-neutral-300 mt-3">섹션형 레이아웃을 통해 모둠별 독립 워크스페이스를 구성하고 실시간 상호 평가 아카이브 구축</p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white dark:bg-neutral-900 border border-neutral-200/70 dark:border-neutral-800">
+          <div class="flex items-center justify-between mb-3">
+            <i data-lucide="message-square" class="w-6 h-6 text-amber-500"></i>
+            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-50 dark:bg-amber-950 text-amber-600 dark:text-amber-400">Advanced</span>
+          </div>
+          <h4 class="text-base font-bold text-neutral-900 dark:text-white">Slido & Mentimeter</h4>
+          <p class="text-xs text-neutral-500 dark:text-neutral-400 mt-1">실시간 응답 · 라이브 폴링 & 익명 Q&A</p>
+          <p class="text-xs text-neutral-600 dark:text-neutral-300 mt-3">익명 질문방을 통해 내성적인 학생들의 질문을 3배 이상 이끌어내며 실시간 이해도 즉시 집계</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Research & Projects Section -->
+  <section id="research" class="py-16 sm:py-24 border-b border-neutral-200/60 dark:border-neutral-800/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl mb-12">
+        <span class="text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">03. RESEARCH & PUBLICATIONS</span>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white mt-2">집필 교재, 연구 과제 및 수상 실적</h2>
+        <p class="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 mt-3">학술적 엄밀성과 교실 현장성을 결합한 도서 집필과 국가 단위 미래 교육 정책 과제 수행 성과입니다.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Book 1 -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800 space-y-3">
+          <div class="flex items-center justify-between text-xs">
+            <span class="px-2.5 py-1 rounded bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 font-semibold">도서 집필</span>
+            <span class="font-mono text-neutral-400">2024.04</span>
+          </div>
+          <h3 class="text-base font-bold text-neutral-900 dark:text-white">《교실을 깨우는 생성형 AI 수업 레시피》</h3>
+          <p class="text-xs text-neutral-500">한빛미디어 · 단독 저자 (ISBN 979-11-6921-234-5)</p>
+          <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+            전국 500여 개 학교에서 교재 및 교원 연수 참고도서로 채택된 생성형 AI 교육 베스트셀러 도서 (45선 수업 시나리오 수록).
+          </p>
+          <div class="text-[11px] font-medium text-blue-600 dark:text-blue-400 pt-2">
+            🏆 교보문고 교육 부문 8주 연속 베스트셀러 1위
+          </div>
+        </div>
+
+        <!-- Research 1 -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800 space-y-3">
+          <div class="flex items-center justify-between text-xs">
+            <span class="px-2.5 py-1 rounded bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 font-semibold">정책 연구</span>
+            <span class="font-mono text-neutral-400">2024.11</span>
+          </div>
+          <h3 class="text-base font-bold text-neutral-900 dark:text-white">AI 디지털교과서 교원 역량 모델 및 연수 표준 연구</h3>
+          <p class="text-xs text-neutral-500">교육부 & KERIS · 책임연구원</p>
+          <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+            2025 AI 디지털교과서 전국 도입을 위한 5대 교원 핵심 역량군 및 전국 17개 시도교육청 맞춤형 연수 체계 표준 수립.
+          </p>
+          <div class="text-[11px] font-medium text-indigo-600 dark:text-indigo-400 pt-2">
+            ✓ 전국 17개 시도교육청 공식 표준 커리큘럼 채택
+          </div>
+        </div>
+
+        <!-- Award 1 -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800 space-y-3">
+          <div class="flex items-center justify-between text-xs">
+            <span class="px-2.5 py-1 rounded bg-amber-50 dark:bg-amber-950 text-amber-600 dark:text-amber-400 font-semibold">정부 포상</span>
+            <span class="font-mono text-neutral-400">2024.05</span>
+          </div>
+          <h3 class="text-base font-bold text-neutral-900 dark:text-white">부총리 겸 교육부장관 표창 (교육혁신 유공)</h3>
+          <p class="text-xs text-neutral-500">대한민국 교육부 · 수훈</p>
+          <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+            디지털 교육 전환 및 전국 단위 교원 에듀테크 실무 연수 기획, 소외지역 학교 방문 컨설팅을 통한 격차 완화 공로 인정.
+          </p>
+          <div class="text-[11px] font-medium text-amber-600 dark:text-amber-400 pt-2">
+            🏆 제43회 스승의 날 교육혁신 부문 정부 표창
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Blog & Educational Resources Section -->
+  <section id="resources" class="py-16 sm:py-24 border-b border-neutral-200/60 dark:border-neutral-800/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl mb-12">
+        <span class="text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">04. EDUCATIONAL RESOURCES & BLOG</span>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white mt-2">외부 교육 자료 & 아티클 모음</h2>
+        <p class="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 mt-3">교실 현장에서 무료로 즉시 활용할 수 있는 실전 템플릿, 칼럼, 특강 영상 링크입니다.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-3xl bg-white dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs mb-3">
+              <span class="px-2.5 py-1 rounded bg-emerald-50 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 font-semibold">수업 템플릿</span>
+              <span class="text-neutral-400">10,000+ 다운로드</span>
+            </div>
+            <h3 class="text-base font-bold text-neutral-900 dark:text-white mb-2">[Notion] 2025 교사를 위한 수업 설계 & 학생 피드백 올인원 대시보드</h3>
+            <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4">
+              수업 계획안 작성, 학생별 누적 관찰 기록, 루브릭 평가, 과제 관리를 한곳에서 처리하는 노션 무료 템플릿.
+            </p>
+          </div>
+          <a href="https://notion.so" target="_blank" class="inline-flex items-center justify-center gap-1.5 text-xs font-semibold px-4 py-2.5 rounded-full bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 hover:opacity-90 transition-opacity">
+            <span>노션 템플릿 복제하기</span>
+            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-white dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs mb-3">
+              <span class="px-2.5 py-1 rounded bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 font-semibold">심층 칼럼</span>
+              <span class="text-neutral-400">Brunch Book</span>
+            </div>
+            <h3 class="text-base font-bold text-neutral-900 dark:text-white mb-2">ChatGPT 4.5 & Gemini 2.0으로 만드는 교과별 탐구학습 질문지 가이드</h3>
+            <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4">
+              단순 암기용 퀴즈를 넘어 학생의 비판적 사고와 메타인지를 자극하는 소크라테스식 프롬프트 설계법.
+            </p>
+          </div>
+          <a href="https://brunch.co.kr" target="_blank" class="inline-flex items-center justify-center gap-1.5 text-xs font-semibold px-4 py-2.5 rounded-full bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 hover:opacity-90 transition-opacity">
+            <span>브런치 아티클 읽기</span>
+            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-white dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs mb-3">
+              <span class="px-2.5 py-1 rounded bg-rose-50 dark:bg-rose-950 text-rose-600 dark:text-rose-400 font-semibold">특강 영상</span>
+              <span class="text-neutral-400">YouTube 16분</span>
+            </div>
+            <h3 class="text-base font-bold text-neutral-900 dark:text-white mb-2">[YouTube] 교실에서 10분 만에 끝내는 실시간 에듀테크 상호작용 꿀팁</h3>
+            <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4">
+              수업 시작 3분 만에 모든 학생의 집중을 이끌어내는 Slido & Padlet 실전 세팅 노하우 시연 영상.
+            </p>
+          </div>
+          <a href="https://youtube.com" target="_blank" class="inline-flex items-center justify-center gap-1.5 text-xs font-semibold px-4 py-2.5 rounded-full bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 hover:opacity-90 transition-opacity">
+            <span>유튜브 영상 시청</span>
+            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Contact Section -->
+  <section id="contact" class="py-16 sm:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl mb-12">
+        <span class="text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">05. CONTACT & COLLABORATION</span>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white mt-2">특강, 직무연수 및 연구 협업 의뢰</h2>
+        <p class="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 mt-3">기관의 니즈에 최적화된 맞춤형 커리큘럼으로 미래 교육의 실질적 변화를 만들어 드립니다.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-4 p-6 sm:p-7 rounded-3xl bg-white dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800 space-y-4">
+          <h3 class="text-lg font-bold text-neutral-900 dark:text-white">직접 문의 안내</h3>
+          <div class="space-y-3 text-xs sm:text-sm text-neutral-600 dark:text-neutral-300">
+            <div>
+              <span class="font-semibold text-neutral-900 dark:text-white">공식 이메일:</span>
+              <div class="font-mono text-neutral-800 dark:text-neutral-200 mt-0.5">seoyeon.edu@example.com</div>
+            </div>
+            <div>
+              <span class="font-semibold text-neutral-900 dark:text-white">연구실 위치:</span>
+              <div class="mt-0.5">서울특별시 관악구 관악로 1 서울대학교 교육연구원</div>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-neutral-100 dark:border-neutral-800 text-xs text-neutral-500">
+            💡 참석 대상자의 디지털 리터러시 수준 및 실습 희망 도구를 함께 적어주시면 상세 제안서를 보내드립니다.
+          </div>
+        </div>
+
+        <div class="lg:col-span-8 p-6 sm:p-8 rounded-3xl bg-white dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800">
+          <form onsubmit="handleInquirySubmit(event)" class="space-y-4" id="inquiryForm">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-neutral-700 dark:text-neutral-300 mb-1">성함 / 담당자명 *</label>
+                <input type="text" required id="inqName" placeholder="예: 홍길동 장학사 / 교수" class="w-full px-3.5 py-2.5 text-xs rounded-xl bg-neutral-50 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 text-neutral-900 dark:text-white" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-neutral-700 dark:text-neutral-300 mb-1">소속 기관 / 학교명 *</label>
+                <input type="text" required id="inqOrg" placeholder="예: 서울특별시교육청 / 한국대학교" class="w-full px-3.5 py-2.5 text-xs rounded-xl bg-neutral-50 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 text-neutral-900 dark:text-white" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-neutral-700 dark:text-neutral-300 mb-1">의뢰 분야 *</label>
+              <select id="inqType" class="w-full px-3.5 py-2.5 text-xs rounded-xl bg-neutral-50 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 text-neutral-900 dark:text-white">
+                <option>교원 직무연수 (초·중·고 AI 융합)</option>
+                <option>대학·교수학습센터(CTL) 혁신 특강</option>
+                <option>AI 디지털교과서 & 에듀테크 워크숍</option>
+                <option>교육과정 & 교수학습 모델 컨설팅</option>
+                <option>학술 연구 과제 및 정책 공동연구</option>
+              </select>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-neutral-700 dark:text-neutral-300 mb-1">이메일 주소 *</label>
+                <input type="email" required id="inqEmail" placeholder="example@sen.go.kr" class="w-full px-3.5 py-2.5 text-xs rounded-xl bg-neutral-50 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 text-neutral-900 dark:text-white" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-neutral-700 dark:text-neutral-300 mb-1">희망 일정</label>
+                <input type="text" id="inqDate" placeholder="예: 2025년 5월 중 수요일" class="w-full px-3.5 py-2.5 text-xs rounded-xl bg-neutral-50 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 text-neutral-900 dark:text-white" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-neutral-700 dark:text-neutral-300 mb-1">상세 요청 사항 *</label>
+              <textarea required rows="4" id="inqMessage" placeholder="참석 인원, 대상, 실습 희망 도구, 주제 등을 자유롭게 작성해주세요." class="w-full p-3.5 text-xs rounded-xl bg-neutral-50 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 text-neutral-900 dark:text-white resize-none"></textarea>
+            </div>
+
+            <div class="flex justify-end pt-2">
+              <button type="submit" class="px-7 py-3 rounded-full bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 text-xs font-semibold hover:opacity-90">
+                의뢰서 전송하기
+              </button>
+            </div>
+          </form>
+
+          <div id="inquirySuccess" class="hidden py-8 text-center space-y-3">
+            <div class="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
+              <i data-lucide="check" class="w-6 h-6"></i>
+            </div>
+            <h4 class="text-lg font-bold text-neutral-900 dark:text-white">의뢰서가 성공적으로 접수되었습니다.</h4>
+            <p class="text-xs text-neutral-500">기재해주신 연락처로 맞춤형 제안서를 신속히 회신드리겠습니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-neutral-200/80 dark:border-neutral-800 bg-white/50 dark:bg-neutral-950 py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-4">
+      <div>© 2025 Dr. Seoyeon Kim. Education Specialist Portfolio.</div>
+      <div class="flex gap-4">
+        <a href="#profile" class="hover:underline">프로필</a>
+        <a href="#teaching" class="hover:underline">교수법</a>
+        <a href="#research" class="hover:underline">연구/도서</a>
+        <a href="#resources" class="hover:underline">교육자료</a>
+        <a href="#contact" class="hover:underline">문의</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Theme toggle
+    function toggleTheme() {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    }
+
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+
+    // Form submission simulation
+    function handleInquirySubmit(e) {
+      e.preventDefault();
+      document.getElementById('inquiryForm').classList.add('hidden');
+      document.getElementById('inquirySuccess').classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    // Initialize Lucide Icons
+    lucide.createIcons();
+  </script>
+</body>
+</html>

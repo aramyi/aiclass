@@ -1,0 +1,6 @@
+{
+  "name": "교육 전문가 포트폴리오",
+  "description": "교육 전문가로서의 역량, 교수법, 에듀테크 도구, 연구/교재/수상 실적 및 교육 자료를 소개하는 모던 Apple 스타일 랜딩페이지",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
